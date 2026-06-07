@@ -214,7 +214,7 @@ class AgentTracer:
                 "tool_params": step_json.get("tool_params"),
             }
 
-            if drift_detected and self.last_ingestion_step_num is not None:
+            if injection_detected and drift_detected and self.last_ingestion_step_num is not None:
                 data["caused_by_step"] = self.last_ingestion_step_num
 
             if ingested_content_preview:

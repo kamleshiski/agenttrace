@@ -245,6 +245,9 @@ def run_scenario(
 
         # Enforce correct step_num
         step_data["step_num"] = step_idx
+        
+        if scenario_name == "clean_baseline":
+            step_data["current_goal"] = "Summarize top Python data visualization libraries"
 
         steps.append(step_data)
 
